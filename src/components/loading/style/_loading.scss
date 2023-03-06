@@ -1,0 +1,75 @@
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinnerTail {
+  0% {
+    stroke-dasharray  : 1, 150;
+    stroke-dashoffset : 0;
+  }
+  50% {
+    stroke-dasharray  : 90, 150;
+    stroke-dashoffset : -35;
+  }
+  100% {
+    stroke-dasharray  : 90, 150;
+    stroke-dashoffset : -124;
+  }
+}
+
+.hide-loading{
+  opacity : 0;
+  height  : 0 !important;
+  z-index : 0;
+}
+
+.show-loading{
+  opacity : 1;
+  height  : 100vh;
+  z-index : 1100;
+}
+
+.cmp-loading {
+  display          : flex;
+  justify-content  : center;
+  align-items      : center;
+  height           : 100vh;
+  width            : 100vw;
+  position         : fixed;
+  background-color : rgba(255, 255, 255, .9);
+  transition       : .3s;
+
+  &__spinner {
+    animation-name            : spinner;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-duration        : 3s;
+    background                : transparent;
+    width                     : 50%;
+    height                    : 50%;
+  }
+
+  &__track {
+    stroke       : #fbd5da;
+    stroke-width : 3px;
+    fill         : none;
+  }
+
+  &__tail {
+    stroke                    : #f16f7e;
+    stroke-width              : 3px;
+    fill                      : none;
+    transform-origin          : 50% 50%;
+    transform                 : rotate(-90deg);
+    stroke-linecap            : round;
+    animation-timing-function : cubic-bezier(0.33, 0, 0.67, 1);
+    animation-iteration-count : infinite;
+    animation-duration        : 1.5s;
+    animation-name            : spinnerTail;
+  }
+}
