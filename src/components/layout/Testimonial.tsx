@@ -1,13 +1,13 @@
-import member1 from "../assets/img/testimonial/member-01.jpg";
-import member3 from "../assets/img/testimonial/member-03.jpg";
-import member2 from "../assets/img/testimonial/member-02.jpg";
+import member1 from "../../assets/img/testimonial/member-01.jpg";
+import member3 from "../../assets/img/testimonial/member-03.jpg";
+import member2 from "../../assets/img/testimonial/member-02.jpg";
 
 export default function () {
     return (<>
         <div id="testimonial" className="service bg-honey container-fluid px-4 py-5">
             <div className="container">
                 <div className="section-title row mb-3">
-                    <h2 className="fw-bolder">Testimonial</h2>
+                    <h2 className="fw-bolder">Testimonios</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas
                         tellus.</p>
                 </div>

@@ -4,6 +4,8 @@ import modalManager from "../../../cross-cutting/utils/modalManager";
 import React, {useState} from "react";
 import h1 from "../../../assets/img/h1.jpg"
 import utils from "../../../application/helpers/utils";
+import iconRedCoopagos from "../../../assets/img/icon/red-coopagos.png";
+import iconPse from "../../../assets/img/icon/pse-logo.png";
 
 export default function () {
     const {formState: model, onChange, startTransaction} = useDetailRequest();
@@ -52,9 +54,7 @@ export default function () {
                         <ul className="key-features mt-2">
                             <li><i className="bi bi-caret-right"></i> Miel campesina de Antioquia</li>
                             <li><i className="bi bi-caret-right"></i> Miel pura orgánica</li>
-                            <li><i className="bi bi-caret-right"></i> Miel que apoya el desarrollo económico de nuestros
-                                campesinos
-                            </li>
+                            <li><i className="bi bi-caret-right"></i> Miel que apoya el desarrollo económico de nuestros campesinos</li>
                             <li>
                                 <br/>
                                 <br/>
@@ -105,11 +105,7 @@ export default function () {
                                         <i className="bi bi-star-fill"></i>
                                     </li>
                                 </div>
-                                <h3 className="fs-6 fw-semi mt-2">Victor Hernández
-
-                                    <small className="float-end fw-normal"> 20 Aug 2022 </small>
-                                </h3>
-
+                                <h3 className="fs-6 fw-semi mt-2">Victor Hernández <small className="float-end fw-normal"> 20 Aug 2022 </small></h3>
                                 <div className="review-text">
                                     Aliquam laoreet nulla ac metus mattis viverra. Fusce hendrerit, augue eget hendrerit
                                     pellentesque, lorem nulla condimentum massa, efficitur pellentesque tortor sapien
@@ -158,18 +154,12 @@ export default function () {
                                         <i className="bi bi-star-fill"></i>
                                     </li>
                                 </div>
-                                <h3 className="fs-6 fw-semi mt-2">Juanita Peña
-
-                                    <small className="float-end fw-normal"> 20 Aug 2022 </small>
-                                </h3>
-
+                                <h3 className="fs-6 fw-semi mt-2">Juanita Peña <small className="float-end fw-normal"> 20 Aug 2022 </small></h3>
                                 <div className="review-text">
                                     Great work, keep it up
                                 </div>
                             </div>
-                            <div className="col-md-2">
-
-                            </div>
+                            <div className="col-md-2"></div>
                         </div>
                     </div>
                 </div>
@@ -192,6 +182,15 @@ export default function () {
                     }}>
                         <div className="modal-body">
                             <div className="p-1">
+                                <div>
+                                    <div className={"col-sm-12"}>
+                                        <div className={"text-end"}>
+                                            <img src={iconRedCoopagos} alt={""} style={{width:"180px"}}/>
+                                            <img src={iconPse} alt={""} style={{width:"80px"}}/>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                </div>
                                 <div className={"col-sm-12"}>
                                     <input type="text"
                                            placeholder="Nombre..."

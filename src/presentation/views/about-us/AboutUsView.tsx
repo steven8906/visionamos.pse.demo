@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import Testimonial from "../../../components/Testimonial";
+import Testimonial from "../../../components/layout/Testimonial";
 import h2 from "../../../assets/img/h2.png"
 import utils from "../../../application/helpers/utils";
 
