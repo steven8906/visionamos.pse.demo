@@ -2,6 +2,8 @@ import {Link} from "react-router-dom";
 import useDetailRequest from "./hooks/useDetailRequest";
 import modalManager from "../../../cross-cutting/utils/modalManager";
 import React, {useState} from "react";
+import h1 from "../../../assets/img/h1.jpg"
+import utils from "../../../application/helpers/utils";
 
 export default function () {
     const {formState: model, onChange, startTransaction} = useDetailRequest();
@@ -12,10 +14,10 @@ export default function () {
                 <div className="row">
                     <h2 className="text-start">Miel Manuka</h2>
                     <ul>
-                        <li><Link to={"/"}><i className="bi bi-house-door"></i> Home</Link></li>
-                        <li><Link to={"/products"}><i className="bi bi-chevron-double-right pe-2"></i> Productos</Link>
+                        <li><Link to={utils.resolveURL("")}><i className="bi bi-house-door"></i> Home</Link></li>
+                        <li><Link to={utils.resolveURL("products")}><i className="bi bi-chevron-double-right pe-2"></i> Productos</Link>
                         </li>
-                        <li><Link to={"/detail"}><i className="bi bi-chevron-double-right pe-2"></i> Miel Manuka</Link>
+                        <li><Link to={utils.resolveURL("detail")}><i className="bi bi-chevron-double-right pe-2"></i> Miel Manuka</Link>
                         </li>
                     </ul>
                 </div>
@@ -25,7 +27,7 @@ export default function () {
             <div className="container">
                 <div className="row about-row">
                     <div className="col-md-5 p-5 text-center">
-                        <img src="src/assets/img/h1.jpg" alt=""/>
+                        <img src={h1} alt=""/>
                     </div>
                     <div className="col-md-7">
                         <h2>Miel de Manuka Pura Orgánica de Antioquia</h2>

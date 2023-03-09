@@ -1,3 +1,7 @@
+import member1 from "../assets/img/testimonial/member-01.jpg";
+import member3 from "../assets/img/testimonial/member-03.jpg";
+import member2 from "../assets/img/testimonial/member-02.jpg";
+
 export default function () {
     return (<>
         <div id="testimonial" className="service bg-honey container-fluid px-4 py-5">
@@ -12,7 +16,7 @@ export default function () {
                         <div className="serv-cove shadow-md rounded bg-white p-3">
                             <div className="prf row mb-3">
                                 <div className="col-3">
-                                    <img className="rounded-pill" src="src/assets/img/testimonial/member-01.jpg" alt=""/>
+                                    <img className="rounded-pill" src={member1} alt=""/>
                                 </div>
                                 <div className="col-9 align-self-center">
                                     <h6 className="mb-0 fw-bolder">Victor Yepes</h6>
@@ -33,7 +37,7 @@ export default function () {
                         <div className="serv-cove shadow-md rounded bg-white p-3">
                             <div className="prf row mb-3">
                                 <div className="col-3">
-                                    <img className="rounded-pill" src="src/assets/img/testimonial/member-03.jpg" alt=""/>
+                                    <img className="rounded-pill" src={member2} alt=""/>
                                 </div>
                                 <div className="col-9 align-self-center">
                                     <h6 className="mb-0 fw-bolder">Mario Ortega</h6>
@@ -54,7 +58,7 @@ export default function () {
                         <div className="serv-cove shadow-md rounded bg-white p-3">
                             <div className="prf row mb-3">
                                 <div className="col-3">
-                                    <img className="rounded-pill" src="src/assets/img/testimonial/member-02.jpg" alt=""/>
+                                    <img className="rounded-pill" src={member3} alt=""/>
                                 </div>
                                 <div className="col-9 align-self-center">
                                     <h6 className="mb-0 fw-bolder">Pedro Hernández</h6>

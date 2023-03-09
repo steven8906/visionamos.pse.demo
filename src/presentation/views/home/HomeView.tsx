@@ -1,4 +1,23 @@
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import s1 from "../../../assets/img/slider/s1.jpg";
+import h2 from "../../../assets/img/h2.png";
+import s2 from "../../../assets/img/slider/s2.jpg";
+import h3 from "../../../assets/img/h3.png";
+import b1 from "../../../assets/img/blog/b1.jpg";
+import b2 from "../../../assets/img/blog/b2.jpg";
+import b4 from "../../../assets/img/blog/b4.jpg";
+import honeycomb from "../../../assets/img/icon/honeycomb.png";
+import bee from "../../../assets/img/icon/bee.png";
+import honey from "../../../assets/img/icon/honey.png";
+import fast from "../../../assets/img/icon/fast.png";
+import p1 from "../../../assets/img/products/p1.png";
+import p2 from "../../../assets/img/products/p2.png";
+import p3 from "../../../assets/img/products/p3.png";
+import p4 from "../../../assets/img/products/p4.png";
+import member1 from "../../../assets/img/testimonial/member-01.jpg";
+import member3 from "../../../assets/img/testimonial/member-03.jpg";
+import member2 from "../../../assets/img/testimonial/member-02.jpg";
+import utils from "../../../application/helpers/utils";
 
 export default function () {
 
@@ -17,7 +36,7 @@ export default function () {
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="src/assets/img/slider/s1.jpg" className="d-block w-100" alt="..."/>
+                    <img src={s1} className="d-block w-100" alt="..."/>
                     <div className="carousel-caption   d-md-block">
                         <div className="row">
                             <div className="col-lg-6 text-start ">
@@ -27,22 +46,22 @@ export default function () {
                                     de miel de
                                     flores disponibles…</p>
                                 <div className="d-inline-block pt-5 text-start d-none d-lg-block">
-                                    <button className="btn btn-primary shadow fs-5 fw-bolder px-5 py-2" onClick={()=> navigate('/detail')}>Comprar aquí
-                                    </button>
-                                    <button
-                                        className="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2" onClick={()=> navigate('/detail')}>Comprar
-                                        aquí
-                                    </button>
+                                    <Link to={"detail"}>
+                                        <span className={"btn btn-primary shadow fs-5 fw-bolder px-5 py-2"}>Comprar aquí</span>
+                                    </Link>
+                                    <Link to={"detail"}>
+                                        <span className={"btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2"}>Comprar</span>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="col-lg-6 d-none d-lg-block">
-                                <img className="w-100" src="src/assets/img/h2.png" alt=""/>
+                                <img className="w-100" src={h2} alt=""/>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src="src/assets/img/slider/s2.jpg" className="d-block w-100" alt="..."/>
+                    <img src={s2} className="d-block w-100" alt="..."/>
                     <div className="carousel-caption  d-md-block">
                         <div className="row">
                             <div className="col-lg-6">
@@ -52,7 +71,8 @@ export default function () {
                                     de miel de
                                     flores disponibles…</p>
                                 <div className="d-inline-block pt-5 text-start d-none d-lg-block">
-                                    <button className="btn btn-primary shadow fs-5 fw-bolder px-5 py-2" onClick={()=> navigate('/detail')}>Comprar aquí
+                                    <button className="btn btn-primary shadow fs-5 fw-bolder px-5 py-2"
+                                            onClick={()=> navigate(utils.resolveURL('detail'))}>Comprar aquí
                                     </button>
                                     <button
                                         className="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2">Comprar
@@ -61,7 +81,7 @@ export default function () {
                                 </div>
                             </div>
                             <div className="col-lg-6 d-none d-lg-block">
-                                <img className="w-100" src="src/assets/img/h3.png" alt=""/>
+                                <img className="w-100" src={h3} alt=""/>
                             </div>
 
                         </div>
@@ -91,7 +111,7 @@ export default function () {
                 <div className="row mt-5">
                     <div className="col-lg-4 col-md-6 mb-4">
                         <div className="serv-cove rounded bg-white p-2">
-                            <img src="src/assets/img/blog/b1.jpg" alt=""/>
+                            <img src={b1} alt=""/>
                             <div className="p-2">
                                 <h5 className="mt-3 fs-7 fw-bold">Top 10 Trends in Webdesign sit nibh amet Mauris ipsum sit
                                     nibh</h5>
@@ -102,7 +122,7 @@ export default function () {
                     </div>
                     <div className="col-lg-4 col-md-6 mb-4">
                         <div className="serv-cove rounded bg-white p-2">
-                            <img src="src/assets/img/blog/b2.jpg" alt=""/>
+                            <img src={b2} alt=""/>
                             <div className="p-2">
                                 <h5 className="mt-3 fs-7 fw-bold">Top 10 Trends in Webdesign sit nibh amet Mauris ipsum sit
                                     nibh</h5>
@@ -113,7 +133,7 @@ export default function () {
                     </div>
                     <div className="col-lg-4 col-md-6 mb-4">
                         <div className="serv-cove rounded bg-white p-2">
-                            <img src="src/assets/img/blog/b4.jpg" alt=""/>
+                            <img src={b4} alt=""/>
                             <div className="p-2">
                                 <h5 className="mt-3 fs-7 fw-bold">Top 10 Trends in Webdesign sit nibh amet Mauris ipsum sit
                                     nibh</h5>
@@ -137,7 +157,7 @@ export default function () {
                 <div className="row mt-5">
                     <div className="col-lg-3 mb-4 col-md-6">
                         <div className="cover text-center">
-                            <img className="w-125" src="src/assets/img/icon/honeycomb.png" alt=""/>
+                            <img className="w-125" src={honeycomb} alt=""/>
                             <h2 className="fs-3 fw-bolder mt-4">Miel Orgánica</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis
                                 malesuada. Sed
@@ -146,7 +166,7 @@ export default function () {
                     </div>
                     <div className="col-lg-3 mb-4 col-md-6">
                         <div className="cover text-center">
-                            <img className="w-125" src="src/assets/img/icon/bee.png" alt=""/>
+                            <img className="w-125" src={bee} alt=""/>
                             <h2 className="fs-3 fw-bolder mt-4">Miel de Abeja Reina</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis
                                 malesuada. Sed
@@ -155,7 +175,7 @@ export default function () {
                     </div>
                     <div className="col-lg-3 mb-4 col-md-6">
                         <div className="cover text-center">
-                            <img className="w-125" src="src/assets/img/icon/honey.png" alt=""/>
+                            <img className="w-125" src={honey} alt=""/>
                             <h2 className="fs-3 fw-bolder mt-4">Embalaje higiénico </h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis
                                 malesuada. Sed
@@ -164,7 +184,7 @@ export default function () {
                     </div>
                     <div className="col-lg-3 mb-4 col-md-6">
                         <div className="cover text-center">
-                            <img className="w-125" src="src/assets/img/icon/fast.png" alt=""/>
+                            <img className="w-125" src={fast} alt=""/>
                             <h2 className="fs-3 fw-bolder mt-4">Entrega rápida </h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis
                                 malesuada. Sed
@@ -186,55 +206,55 @@ export default function () {
                 <div className="row">
                     <div className="col-lg-3 col-md-4 mb-4">
                         <div className="product bg-white p-4 text-center shadow-md">
-                            <img src="src/assets/img/products/p1.png" alt=""/>
+                            <img src={p1} alt=""/>
                             <div className="d-inline-block">
                                 <h4 className="fw-bolder fs-5 mt-4">Miel Manuka</h4>
                                 <span className="fw-bolder fs-4">85$</span> <span
                                 className="text-muted text-decoration-line-through">105$</span>
                             </div>
                             <div className="d-inline-block mt-3">
-                                <button className="btn btn-primary px-5" onClick={()=> navigate('/detail')}>Comprar aquí</button>
+                                <button className="btn btn-primary px-5" onClick={()=> navigate(utils.resolveURL("detail"))}>Comprar aquí</button>
                             </div>
 
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-4 mb-4">
                         <div className="product bg-white p-4 text-center shadow-md">
-                            <img src="src/assets/img/products/p2.png" alt=""/>
+                            <img src={p2} alt=""/>
                             <div className="d-inline-block">
                                 <h4 className="fw-bolder fs-5 mt-4">Miel cruda</h4>
                                 <span className="fw-bolder fs-4">85$</span> <span
                                 className="text-muted text-decoration-line-through">105$</span>
                             </div>
                             <div className="d-inline-block mt-3">
-                                <button className="btn btn-primary px-5" onClick={()=> navigate('/detail')}>Comprar aquí</button>
+                                <button className="btn btn-primary px-5" onClick={()=> navigate(utils.resolveURL("detail"))}>Comprar aquí</button>
                             </div>
 
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-4 mb-4">
                         <div className="product bg-white p-4 text-center shadow-md">
-                            <img src="src/assets/img/products/p3.png" alt=""/>
+                            <img src={p3} alt=""/>
                             <div className="d-inline-block">
                                 <h4 className="fw-bolder fs-5 mt-4">Miel de Flores Silvestres</h4>
                                 <span className="fw-bolder fs-4">85$</span> <span
                                 className="text-muted text-decoration-line-through">105$</span>
                             </div>
                             <div className="d-inline-block mt-3">
-                                <button className="btn btn-primary px-5" onClick={()=> navigate('/detail')}>Comprar aquí</button>
+                                <button className="btn btn-primary px-5" onClick={()=> navigate(utils.resolveURL("detail"))}>Comprar aquí</button>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-4 mb-4">
                         <div className="product bg-white p-4 text-center shadow-md">
-                            <img src="src/assets/img/products/p4.png" alt=""/>
+                            <img src={p4} alt=""/>
                             <div className="d-inline-block">
                                 <h4 className="fw-bolder fs-5 mt-4">Miel de Abeja Reina</h4>
                                 <span className="fw-bolder fs-4">85$</span> <span
                                 className="text-muted text-decoration-line-through">105$</span>
                             </div>
                             <div className="d-inline-block mt-3">
-                                <button className="btn btn-primary px-5" onClick={()=> navigate('/detail')}>Comprar aquí</button>
+                                <button className="btn btn-primary px-5" onClick={()=> navigate(utils.resolveURL("detail"))}>Comprar aquí</button>
                             </div>
 
                         </div>
@@ -252,7 +272,6 @@ export default function () {
                 <div className="about-row row">
                     <div className="col-md-7">
                         <div className="abut-detail fs-6">
-
                             <p className="mb-3">Integer vulputate vehicula dolor a eleifend. Duis aliquam condimentum sapien,
                                 eget
                                 tempor justo. Aenean porttitor nibh metus, Cras faucibus tellus eleifend, fermentum purus in,
@@ -271,11 +290,9 @@ export default function () {
                                 eleifend, fermentum purus in, dapibus sapien. Praesent nec ornare risus. Etiam iaculis, ligula
                                 vel gravida </p>
                         </div>
-
-
                     </div>
                     <div className="col-md-5">
-                        <img src="src/assets/img/h2.png" alt=""/>
+                        <img src={member1} alt=""/>
                     </div>
                 </div>
             </div>
@@ -293,7 +310,7 @@ export default function () {
                         <div className="serv-cove shadow-md rounded bg-white p-3">
                             <div className="prf row mb-3">
                                 <div className="col-3">
-                                    <img className="rounded-pill" src="src/assets/img/testimonial/member-01.jpg" alt=""/>
+                                    <img className="rounded-pill" src={h2} alt=""/>
                                 </div>
                                 <div className="col-9 align-self-center">
                                     <h6 className="mb-0 fw-bolder">Victor Yepes</h6>
@@ -314,7 +331,7 @@ export default function () {
                         <div className="serv-cove shadow-md rounded bg-white p-3">
                             <div className="prf row mb-3">
                                 <div className="col-3">
-                                    <img className="rounded-pill" src="src/assets/img/testimonial/member-03.jpg" alt=""/>
+                                    <img className="rounded-pill" src={member3} alt=""/>
                                 </div>
                                 <div className="col-9 align-self-center">
                                     <h6 className="mb-0 fw-bolder">Mario Ortega</h6>
@@ -335,7 +352,7 @@ export default function () {
                         <div className="serv-cove shadow-md rounded bg-white p-3">
                             <div className="prf row mb-3">
                                 <div className="col-3">
-                                    <img className="rounded-pill" src="src/assets/img/testimonial/member-02.jpg" alt=""/>
+                                    <img className="rounded-pill" src={member2} alt=""/>
                                 </div>
                                 <div className="col-9 align-self-center">
                                     <h6 className="mb-0 fw-bolder">Pedro Hernández</h6>

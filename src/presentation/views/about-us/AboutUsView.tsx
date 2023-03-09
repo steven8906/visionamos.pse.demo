@@ -1,5 +1,7 @@
 import {Link} from "react-router-dom";
 import Testimonial from "../../../components/Testimonial";
+import h2 from "../../../assets/img/h2.png"
+import utils from "../../../application/helpers/utils";
 
 export default function () {
 
@@ -9,8 +11,8 @@ export default function () {
                 <div className="row">
                     <h2 className="text-start">Sobre Nosotros</h2>
                     <ul>
-                        <li><Link to={"/"}><i className="bi bi-house-door"></i> Home</Link></li>
-                        <li><Link to={"/about-us"}><i className="bi bi-chevron-double-right pe-2"></i> Sobre nosotros</Link></li>
+                        <li><Link to={utils.resolveURL('')}><i className="bi bi-house-door"></i> Home</Link></li>
+                        <li><Link to={utils.resolveURL('about-us')}><i className="bi bi-chevron-double-right pe-2"></i> Sobre nosotros</Link></li>
                     </ul>
                 </div>
             </div>
@@ -21,7 +23,6 @@ export default function () {
                 <div className="about-row row">
                     <div className="col-md-7">
                         <div className="abut-detail fs-6">
-
                             <p className="mb-3">Integer vulputate vehicula dolor a eleifend. Duis aliquam condimentum
                                 sapien,
                                 eget tempor justo. Aenean porttitor nibh metus, Cras faucibus tellus eleifend, fermentum
@@ -45,7 +46,7 @@ export default function () {
                         </div>
                     </div>
                     <div className="col-md-5">
-                        <img src="src/assets/img/h2.png" alt=""/>
+                        <img src={h2} alt=""/>
                     </div>
                 </div>
             </div>

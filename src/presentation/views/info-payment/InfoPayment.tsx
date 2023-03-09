@@ -1,6 +1,8 @@
 import Testimonial from "../../../components/Testimonial";
 import {Link, useParams} from "react-router-dom";
 import React from "react";
+import h3 from "../../../assets/img/h3.png";
+import utils from "../../../application/helpers/utils";
 
 export default function () {
     const {paymentId} = useParams();
@@ -11,7 +13,7 @@ export default function () {
                     <div className="row">
                         <h2 className="text-start">Información de pago</h2>
                         <ul>
-                            <li><Link to={"/"}><i className="bi bi-house-door"></i> Home</Link></li>
+                            <li><Link to={utils.resolveURL("")}><i className="bi bi-house-door"></i> Home</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -28,7 +30,7 @@ export default function () {
                             </div>
                         </div>
                         <div className="col-md-5">
-                            <img src="src/assets/img/h3.png" alt=""/>
+                            <img src={h3} alt=""/>
                         </div>
                     </div>
                 </div>

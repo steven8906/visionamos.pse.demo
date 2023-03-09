@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import utils from "../../../application/helpers/utils";
 
 export default function () {
     return (<>
@@ -7,8 +8,8 @@ export default function () {
                     <div className="row">
                         <h2 className="text-start">Sobre Nosotros</h2>
                         <ul>
-                            <li><Link to={"/"}><i className="bi bi-house-door"></i> Home</Link></li>
-                            <li><Link to={"/contact"}><i className="bi bi-chevron-double-right pe-2"></i> Contacto</Link></li>
+                            <li><Link to={utils.resolveURL("")}><i className="bi bi-house-door"></i> Home</Link></li>
+                            <li><Link to={utils.resolveURL("contact")}><i className="bi bi-chevron-double-right pe-2"></i> Contacto</Link></li>
                         </ul>
                     </div>
                 </div>

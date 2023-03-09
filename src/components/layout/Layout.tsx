@@ -1,6 +1,10 @@
 import {Link} from "react-router-dom";
 import {ReactNode} from "react";
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo.png';
+import b4 from '../../assets/img/blog/b4.jpg';
+import b3 from '../../assets/img/blog/b3.jpg';
+import b2 from '../../assets/img/blog/b2.jpg';
+import utils from "../../application/helpers/utils";
 
 type Props = {
     children: ReactNode
@@ -19,10 +23,10 @@ export default function ({children}: Props) {
                         </div>
                         <div id="menu" className="col-lg-8 d-none d-lg-block">
                             <ul className="fw-bold float-end nacul fs-7">
-                                <li className="float-start p-3 px-4"><Link to={"/"}>Home</Link> </li>
-                                <li className="float-start p-3 px-4"> <Link to={"/about-us"}>Sobre nosotros</Link> </li>
-                                <li className="float-start p-3 px-4"> <Link to={"/products"}>Productos</Link> </li>
-                                <li className="float-start p-3 px-4"> <Link to={"/contact"}>Contactenos</Link> </li>
+                                <li className="float-start p-3 px-4"><Link to={utils.resolveURL("")}>Home</Link> </li>
+                                <li className="float-start p-3 px-4"> <Link to={utils.resolveURL("about-us")}>Sobre nosotros</Link> </li>
+                                <li className="float-start p-3 px-4"> <Link to={utils.resolveURL("products")}>Productos</Link> </li>
+                                <li className="float-start p-3 px-4"> <Link to={utils.resolveURL("contact")}>Contactenos</Link> </li>
                             </ul>
                         </div>
                     </div>
@@ -54,7 +58,7 @@ export default function ({children}: Props) {
 
                             <div className="post-row">
                                 <div className="image">
-                                    <img src="src/assets/img/blog/b4.jpg" alt=""/>
+                                    <img src={b4} alt=""/>
                                 </div>
                                 <div className="detail">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit </p>
@@ -63,7 +67,7 @@ export default function ({children}: Props) {
 
                             <div className="post-row">
                                 <div className="image">
-                                    <img src="src/assets/img/blog/b3.jpg" alt=""/>
+                                    <img src={b3} alt=""/>
                                 </div>
                                 <div className="detail">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit </p>
@@ -72,7 +76,7 @@ export default function ({children}: Props) {
 
                             <div className="post-row">
                                 <div className="image">
-                                    <img src="src/assets/img/blog/b2.jpg" alt=""/>
+                                    <img src={b2} alt=""/>
                                 </div>
                                 <div className="detail">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit </p>
