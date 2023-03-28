@@ -13,7 +13,7 @@ export default function () {
     useEffect(() => {
         get<IResponse<string>>(`PsePayments/GetPaymentInfo/${paymentId}`)
             .then(res => setState(res.response))
-            .finally(() => setTimeout(() => setIsLoading(false), 2500))
+            .finally(() => setTimeout(() => setIsLoading(false), 4000))
     }, []);
 
     return {
